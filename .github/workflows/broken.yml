@@ -4,9 +4,7 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - name: Download the code
-        uses: actions/checkout@v4 
       - name: Read the readme
         run: cat README.md
       - name: Show the Python version
-        run: python3 --version
+        run: pyhton3 --version
