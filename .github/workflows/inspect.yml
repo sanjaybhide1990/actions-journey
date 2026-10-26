@@ -1,0 +1,13 @@
+name: test
+on: push
+jobs:
+  checkout: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download the code
+        uses: actions/checkout@v4
+      - name: Print the kernel details
+        run: |
+          uname -a
+          ls
+          ls | wc -l  
