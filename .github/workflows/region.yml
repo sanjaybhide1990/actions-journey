@@ -1,0 +1,8 @@
+name: variables
+on: push
+jobs:
+  variables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display the variable
+        run: echo "${{ vars.DEPLOY_REGION }}"
