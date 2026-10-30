@@ -1,0 +1,15 @@
+name: Cleanup after failure
+on: push
+jobs:
+  cleanup-after-failure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start test database
+        run: echo "Starting the test database"
+      - name: Flaky check
+        run: |
+          echo "Something went wrong"
+          exit 1
+      - name: Stop test database
+        if: always()
+        run: "Shutting down the database"
