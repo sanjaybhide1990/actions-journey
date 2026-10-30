@@ -2,7 +2,7 @@ name: Conditional job
 on: push
 jobs:
   test:
-    on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Run tests
         run: echo "Running all the tests"
